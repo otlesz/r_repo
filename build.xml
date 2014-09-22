@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="uRProgramming" default="installPkg" basedir=".">
+
+<property file="${basedir}/build.properties"/>
+
+<property name="test.dir" value="${basedir}/test"/>
+	
+        <target name="Directories"  >
+		<echo>Build uRProgramming Package </echo>
+		<echo>Which is the Rlibrary "${Rlibrary.dir}" </echo>
+		<echo>Which is the basedir "${basedir}" </echo>
+		<echo>Which is the testdir "${test.dir}" </echo>
+	</target>
+
+
+	<condition property="RargLine" value='CMD INSTALL --library=${Rlibrary.dir}'>
+		<isset property="Rlibrary.dir"/>
+	</condition>
+
+        <property name="RargLine" value='CMD INSTALL'/>
+
+        <target name="rlib">
+		<echo>Which is the Rlibrary ${Rlibrary.dir} </echo>
+		<echo>${RargLine}</echo>
+	</target>
+
+	
+        <target name="clean" >
+      		<move todir="${backupTar.dir}">
+          		<fileset dir="${basedir}">
+              		<include name="uRProgramming*tar*gz" />
+          		</fileset>
+      		</move>
+	</target>
+
+        <target name="cleanSetUpFiles" >
+		<delete file="RinstPkgs.txt"/>
+		<delete file="RlibPaths.txt"/>
+	</target>
+
+
+	<target name="build" >
+		<echo>Build uRProgramming Package </echo>
+               
+                <echo>"basedir="${basedir}</echo>
+                <exec dir="${basedir}" executable="/bin/sh">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                <arg line='-c "R CMD  build --binary ${basedir}/lib/uRProgramming/"'/>
+                </exec>  
+               
+	</target>
+
+<target name="check" >
+		<echo>check uRProgramming Package </echo>
+               
+                <echo>"basedir="${basedir}</echo>
+                <exec dir="${basedir}" executable="/bin/sh">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                <arg line='-c "R CMD  check uRProgramming/"'/>
+                </exec>  
+               
+                
+	</target>
+        
+
+        <target name="installPkg" depends="build" >
+		<echo>Build uRProgramming Package </echo>
+		<echo>'R CMD INSTALL --library="${Rlibrary.dir}" '</echo>
+		<apply executable="R">
+		<arg line='${RargLine}'/>
+                 <fileset dir="${basedir}">
+                     <patternset>
+                         <include name="uRProgramming*tar.gz"/>
+                     </patternset>
+                 </fileset>
+                 </apply>
+	</target>
+
+	 <target name="report" depends="RUN_report" >
+                    <echo>running  report function a Batch mode</echo>
+                     <exec dir="${test.dir}" executable="/bin/sh" >
+                         <!--
+                    <arg line='-c "ooffice uRProgramming_report.odt"'/>
+                    -->
+                    <arg line='-c "soffice uRProgramming_report.odt"'/>
+                    </exec>
+            </target>
+
+	 <target name="RUN_report"  >
+                    <echo>running  report function a Batch mode</echo>
+                     <exec dir="${test.dir}" executable="/bin/sh" >
+                    <arg line='-c "R CMD BATCH odfWeave.R"'/>
+                    </exec>
+            </target>
+
+	 <target name="RUN_setup"  depends="cleanSetUpFiles">
+                    <echo>running  setup to see lib pathes, and pkgs </echo>
+                     <exec dir="${basedir}" executable="/bin/sh" >
+                    <arg line='-c "R CMD BATCH setUp.R"'/>
+                    </exec>
+            </target>
+    
+	<tstamp>
+		<format property="TODAY_USA" pattern="MMMM-dd-yyyy" locale="en" />
+	</tstamp>
+
+
+
+</project>
