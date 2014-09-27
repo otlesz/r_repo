@@ -1,0 +1,39 @@
+## This program is free software; you can redistribute it and/or modify it
+## under the terms of the GNU General Public License as published by the
+## Free Software Foundation; either version 2, or (at your option) any
+## later version.
+##
+## These functions are distributed in the hope that they will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+##
+## The text of the GNU General Public License, version 2, is available
+## as http://www.gnu.org/copyleft or by writing to the Free Software
+## Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+#
+
+
+#######################################
+# Function dataTypes
+#######################################
+#The purpose of these function to
+#functionality
+#This function written by Zekai Otles otlesz@gmail.com
+#Date of function first written 9/24/2104
+
+dataTypes<-function(type=type)
+{
+	if(is.numeric(type)){
+             returnVal="numeric"
+             if(is.integer(type)){
+                returnVal=integer
+              }else{
+                returnVal=double
+              }
+              
+	}else{
+              returnVal=typeof(type)
+	}
+        return(returnVal)
+}
