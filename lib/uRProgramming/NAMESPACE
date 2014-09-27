@@ -1,0 +1,18 @@
+# Remove the previous line if you edit this file
+
+# Export all names
+export(
+    dataTypes  
+)
+
+# Import all packages listed as Imports or Depends
+import(
+  chron,
+  odfWeave,
+  RgoogleMaps,
+  rgdal,
+  sp,
+  sqldf,
+  xtable,
+  utils
+)
