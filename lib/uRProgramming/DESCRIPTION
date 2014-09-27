@@ -1,9 +1,8 @@
 Package: uRProgramming
-Version: 1.0.0
+Version: 1.0.0R
 Date: 2014-10-15
-Title: Data Management Reporting Tool Version 1.1.1
+Title: uRProgramming Package 1.0.0
 Author@R: c(person("Zekai", "Otles",email = "otlesz@gmail.com"),role="aut")
-             
 Author: Zekai Otles  <otlesz@gmail.com>
 Maintainer: Zekai Otles  <otlesz@gmail.com>
 Depends: R (>= 3.0.0)
