@@ -18,7 +18,6 @@
 # Function dataTypes
 #######################################
 #The purpose of these function to
-#functionality
 #This function written by Zekai Otles otlesz@gmail.com
 #Date of function first written 9/24/2104
 
