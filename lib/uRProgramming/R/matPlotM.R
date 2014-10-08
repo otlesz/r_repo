@@ -1,18 +1,17 @@
 #This function plots x with multiple y lines  using  matPlot 
 #first column of the matrix is treated as x, and other columns are y values
-#written by zekai otles <otles@fstrf-wi.org>
-#Zekai Otles modified this Feb. 28th, 2010 to have options xaxis limits and yaxis limits with specified ticks
-#because I want to use this more general plotting routines
+#written by zekai otles
 
-dfRmatPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,ylab=ylab,title=title,leg=leg){
+matPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,ylab=ylab,title=title,leg=leg){
   library("chron")
-#  library("dfRTools")
+  
+
 
         nRows<-dim(shMatrix)[1]
         nCols<-dim(shMatrix)[2]
 
         df<-data.frame(shMatrix[,2:nCols])
-        #df<-data.frame(shMatrix[,1:nCols])
+        
         #need to have dynamic color
         colors<-array(c("blue","red","green","yellow","orange","magenta","purple","cyan","black","gray"),dim=length(colnames(df)))
        charArray<-array(c(1,3,5,10,15,20,25),dim=length(colnames(df)))
@@ -20,8 +19,7 @@ dfRmatPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,
 	if(is.null(yaxisOpts)){
        #revert back to old assumptions x, is the first column of the matrix
         yMaxLimits<-c(0,max(as.numeric(shMatrix[1:nRows,2:nCols]),na.rm=T))
-        #yMaxLimits<-c(0,max(as.numeric(shMatrix[1:nRows,1:nCols]),na.rm=T))
-        #first column of the matrix ix the x-values
+       
 		ytick<-5
 		yaxtVal<-"n"
 	}else{
@@ -35,7 +33,7 @@ dfRmatPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,
         }else{
          xLabels<-as.integer(rownames(shMatrix))
         }
-        #x<-seq(1:length(xLabels))
+        
 	x<-shMatrix[,1]
 	if(is.null(xaxisOpts)){
 		xtick<-(max(x)-min(x))/length(x)
@@ -51,7 +49,7 @@ dfRmatPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,
 	print(x)
 	print(df)
 
-        #subjects have no halfs to eliminate the floating point number representation
+        
         #I turned yaxt tick first then I turned back with given tick values to
         # avoid default behaviour
         par(yaxt="n")
@@ -62,14 +60,12 @@ dfRmatPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,
         par(yaxt="l")
         axis(2)
 
-#matplot(x,df,type="l",lty=1,xaxt="n",ylab="number of Subjects Reached the Visit",xlab="Visit or Sequence Number  ",ylim=yMaxLimits,xlim=xMaxLimits,main="Subject Tracking for Cordinating Centers",col=colors)
         matpoints(x,df,pch=c(1,3,5,10,15,20,25),col=colors)
 
         axis(1,at=x,xLabels)
 
 
        yPos<-max(yMaxLimits)+ytick/2
-       dfRlegend(max(x)+xtick,max(yMaxLimits),leg=leg,pch=charArray,col=colors,bty="n",xjust=1,yjust=1)
-       #dfRlegend(max(x)+tick,max(yMaxLimits),paste("center",shMatrix[1:nRows-1,1],sep="_"),pch=charArray,col=colors,bty="n",xjust=1,yjust=1)
+       legendM(max(x)+xtick,max(yMaxLimits),leg=leg,pch=charArray,col=colors,bty="n",xjust=1,yjust=1)
 
 }

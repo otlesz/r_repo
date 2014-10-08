@@ -16,11 +16,11 @@
 
 
 #######################################
-# Function dfRlegend 
+# Function legendM 
 #######################################
 #This functions put the legends on the plots 
 #Modified by zekai otles 
-legend <-function(x, y = NULL, legend, fill=NULL, col = "black", lty, lwd, pch,
+legendM<-function(x, y = NULL, legend, fill=NULL, col = "black", lty, lwd, pch,
 	 angle = NULL, density = NULL, bty = "o",
 	 bg = par("bg"), pt.bg = NA, cex = 1,
 	 xjust = 0, yjust = 1, x.intersp = 1, y.intersp = 1, adj = c(0, 0.5),
@@ -28,7 +28,7 @@ legend <-function(x, y = NULL, legend, fill=NULL, col = "black", lty, lwd, pch,
          merge = do.lines && has.pch, trace = FALSE,
 	 plot = TRUE, ncol = 1, horiz = FALSE)
 {
-#ls(library("dfRTools")
+
 ## the 2nd arg may really be `legend'
     if(missing(legend) && !missing(y) &&
        (is.character(y) || is.expression(y))) {
