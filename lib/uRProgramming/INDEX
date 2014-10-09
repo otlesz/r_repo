@@ -1,1 +1,6 @@
-dataTypes   Determines Type of Data
+createDataFile  Reads the csv file or ask the file to be read
+dataTypes       Determines Type of Data
+environment     Prints out the usage of Environment usage
+legendM         Legend for plots
+matPlotM        Plot the data in Matrix form
+
