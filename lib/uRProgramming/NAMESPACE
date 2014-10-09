@@ -2,17 +2,17 @@
 
 # Export all names
 export(
-    dataTypes  
+    createDataFile,
+    dataTypes, 
+    environment,
+    legendM,
+    matPlotM
 )
 
 # Import all packages listed as Imports or Depends
 import(
-  chron,
-  odfWeave,
-  RgoogleMaps,
-  rgdal,
-  sp,
-  sqldf,
-  xtable,
-  utils
+    chron,
+    tcltk
+#   odfWeave,
+#RgoogleMaps
 )
