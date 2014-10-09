@@ -26,5 +26,5 @@ imageDefs$type<-"cairo1"
 imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
-odfWeave("uRProgramming_template.odt","dfRTools_report.odt",workDir="../odfWeaveTmp")
+odfWeave("uRProgramming_temp.odt","dfRTools_report.odt",workDir="../odfWeaveTmp")
 
