@@ -1,10 +1,9 @@
 #odfWeave driver
 library("chron")
 library("odfWeave")
-library("dfRTools")
 library("log4r")
-data("dfRToolsData")
-data(odfWeaveData)
+library("uRProgramming")
+data("uRProgramming")
 
 
 library('log4r')
@@ -27,8 +26,5 @@ imageDefs$type<-"cairo1"
 imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
-
-#odfWeave("study_220_in.odt","study_220_out.odt",workDir="../odfWeaveTmp")
-#odfWeave("dfRTools_template.odt","dfRTools_report.odt",workDir="../odfWeaveTmp",control=odfWeaveControl(cleanup=TRUE))
-odfWeave("dfRTools_template.odt","dfRTools_report.odt",workDir="../odfWeaveTmp")
+odfWeave("uRProgramming_template.odt","dfRTools_report.odt",workDir="../odfWeaveTmp")
 
