@@ -3,7 +3,9 @@ library("chron")
 library("odfWeave")
 library("log4r")
 library("uRProgramming")
-data("uRProgramming")
+data(package="uRProgramming")
+data(synDat)
+
 
 
 library('log4r')
@@ -26,5 +28,5 @@ imageDefs$type<-"cairo1"
 imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
-odfWeave("uRProgramming_temp.odt","dfRTools_report.odt",workDir="../odfWeaveTmp")
+odfWeave("uRProgramming_temp.odt","uRProgramming_report.odt",workDir="../odfWeaveTmp")
 
