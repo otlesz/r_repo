@@ -27,6 +27,7 @@
 FUNCTION_NAME<-function(mat=freqData,xlabels=NULL,ylabels=NULL,onePlot=FALSE,besideOrNot=TRUE,isCol=TRUE,titleOfPlot=NULL){
 #Write the contents of R
 {
+  This just test
 
 }
 
