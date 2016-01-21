@@ -21,7 +21,7 @@
 #######################################
 #The purpose of these function to
 #functionality
-#This function written by Zekai Otles otles@fstrf-wi.org
+#This function written by Zekai Otles otles@gmail.com
 #Date of function first written
 
 manuplateData<-function(type=type)
