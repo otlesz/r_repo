@@ -30,12 +30,13 @@ dataStructures<-function(type=type)
 		cat("names(x)<-c(","a","b","c",")\n")
 	}else if(type=="list"){
 	print("list can hold differenwt types character, numeric, unlike the vector")
-	cat("aList<-list(fielwd1=324,field2=c(1,2,3),field3=","text\n")
+	cat("aList<-list(field1=324,field2=c(1,2,3),field3=","text\n")
 	aList<-list(field1=324,field2=c(1,2,3),field3="text")
 	print("list can be retrieved; aList$field1")
 	print(aList$field1)
 	cat("list can be retrieved; aList[","field2","]\n")
 	print(aList[["field2"]])
+	print(aList[["field3"]])
 
 	}else if(type=="arrays"){
 
