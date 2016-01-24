@@ -22,7 +22,7 @@
 #Reads data in csv format with header and skips 3 lines
 #Author is Zekai Otles <otlesz@gmail.com>
 
-createDataFile<-function(fname=NULL)
+CreateDataFile<-function(fname=NULL)
 {
 require("tcltk")
 
