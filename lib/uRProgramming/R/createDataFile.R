@@ -28,9 +28,9 @@ require("tcltk")
 
 if(is.null(fname)){
     fname<-file(tk_choose.files())
-    synDat<-read.csv(fname,header=TRUE,skip=3,sep=",")
+    synDat<-read.csv(fname,header=TRUE,skip=0,sep=",")
 }else{
-    synDat<-read.csv(fname,header=TRUE,skip=3,sep=",")
+    synDat<-read.csv(fname,header=TRUE,skip=0,sep=",")
 }
    
     return(synDat)
