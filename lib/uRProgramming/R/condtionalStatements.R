@@ -16,18 +16,43 @@
 #
 
 
-#######################################
-# Function FUNCTION_NAME
-#######################################
-#The purpose of these function to
-#functionality
-#This function written by FIRST AND LAST NAME <e-mail address>
+
+#The purpose of these function to demonstrate conditional statemenet
+#
+#This function written by Zekai Otles <otlesz@gmail.com>
 #Date of function first written
 
-FUNCTION_NAME<-function(mat=freqData,xlabels=NULL,ylabels=NULL,onePlot=FALSE,besideOrNot=TRUE,isCol=TRUE,titleOfPlot=NULL){
-#Write the contents of R
-{
-  This just test
+ConditionalStatement<-function(){
+require("tcltk")
+  fName=file(tk_choose.files())
+  print(fName)
+  if(is.null(fName)){
+    print("No file selected \n")
+  }else{
+    synDat<-read.csv(fName,header=TRUE,skip=0,sep=",")
+    
+    
+  }
+  
+  if(!is.null(synDat)){
+    
+    for (indx in 1:length(synDat[[1]])){
+      #comparison operator
+      if(synDat[indx,1] ==1 ) {synDat[indx,1]<-"M"}
+      
+      #assignment based on range
+      if(synDat[indx,2] <=25 )synDat[indx,2]<-"Y"
+  
+      if(synDat[indx,2] > 25 & synDat[indx,2] <=50 )synDat[indx,2]<-"M"
+      
+      if(synDat[indx,2] > 50 ) {synDat[indx,2]<-"O"}
 
+    }
+      
+    
+  }
+  
+  
+return (synDat)
 }
 
