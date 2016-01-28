@@ -41,14 +41,38 @@ require("tcltk")
       if(synDat[indx,1] ==1 ) {synDat[indx,1]<-"M"}
       
       #assignment based on range
-      if(synDat[indx,2] <=25 )synDat[indx,2]<-"Y"
+     if(synDat[indx,2] <=25 )synDat[indx,2]<-"Y"
   
+      #and &
+      #or |
       if(synDat[indx,2] > 25 & synDat[indx,2] <=50 )synDat[indx,2]<-"M"
       
-      if(synDat[indx,2] > 50 ) {synDat[indx,2]<-"O"}
-
-    }
+     if(synDat[indx,2] > 50 ) {synDat[indx,2]<-"O"}
       
+      #switch statement
+      #switch takes an expression, and return a value in the list
+      #switch(statement,element[1..n])
+      #cat("switch(statement,element[1..n])","\n")
+                                          
+    
+    } #end of for loop
+    stat="mean"
+    result<-switch(stat,"mean"=mean(synDat[,3]),"sd"=sd(synDat[,3]) )
+    
+    print(result)             
+    
+    #simple comparison and assignment 
+    #ifelse(test, true,false)
+    
+    aVar=5
+    result<-ifelse(aVar %% 2 == 0, "Even number", "Odd Number")
+    print (result)
+    
+    
+    #switch statement
+    #switch takes an expression, and return a value in the list
+    #switch(statement,element[1..n])
+    
     
   }
   
