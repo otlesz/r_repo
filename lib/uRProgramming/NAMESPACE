@@ -2,11 +2,7 @@
 
 # Export all names
 export(
-    createDataFile,
-    dataTypes, 
-    environment,
-    legendM,
-    matPlotM
+   
 )
 
 # Import all packages listed as Imports or Depends
