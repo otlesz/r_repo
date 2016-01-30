@@ -1,4 +1,3 @@
-
 ##
 ## This program is free software; you can redistribute it and/or modify it
 ## under the terms of the GNU General Public License as published by the
@@ -12,22 +11,30 @@
 ##
 ## The text of the GNU General Public License, version 2, is available
 ## as http://www.gnu.org/copyleft or by writing to the Free Software
-## Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-#
+#Reads data in csv format with header and skips 3 lines
+#Author is Zekai Otles <otlesz@gmail.com>
+#maintainer{ Zekai Otles otlesz@gmail.com}
+Main<-function(chapter){
+#library (uRprogramming)
+require("tcltk")
+source(tk_choose.files())
+  
+  if(chapter=="I") {
+    
+    setParentDir=setwd("..")
 
+#  setwd("./lib/uRprogramming/R")
+ 
+  
+#  source("createDataFile.R")
+  CreateDataFile()
+  } else if (chapter=="II"){
+    synDat<-ConditionalStatement()
+    stat<-"mean"
+    result<-switch(stat,"mean"=mean(synDat[,3]),"sd"=sd(synDat[,3]) )
+    print(result)
+  }
+  
 
-#######################################
-# Function FUNCTION_NAME
-#######################################
-#The purpose of these function to
-#functionality
-#This function written by FIRST AND LAST NAME <e-mail address>
-#Date of function first written
-simpleStats<-funtion(type=type){
-	if(type="ave"){
-
-	}else if(type="var"){
-	}else if(type="summary"){
-	}else if(type="median"){
-	}
+  
 }
