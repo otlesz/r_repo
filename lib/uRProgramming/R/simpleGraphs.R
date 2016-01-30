@@ -21,7 +21,7 @@
 #######################################
 #The purpose of these function to
 #functionality
-#This function written by FIRST AND LAST NAME <e-mail address>
+#This function written by Zekai Otles otlesz@gmail.com
 #Date of function first written
 
 simpleGraphs<-function(type=type) {
