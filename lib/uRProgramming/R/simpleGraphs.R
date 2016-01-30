@@ -34,3 +34,4 @@ simpleGraphs<-funtion(type=type){
 	}else if(type="matplot"){
 	}else if(type="hist"){
 }
+}
