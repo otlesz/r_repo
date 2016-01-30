@@ -21,11 +21,9 @@
 #######################################
 #The purpose of these function to
 #functionality
-#This function written by FIRST AND LAST NAME <e-mail address>
+#This function written by Zekai Otles otlesz@gmail.com
 #Date of function first written
-
-FUNCTION_NAME<-function(mat=freqData,xlabels=NULL,ylabels=NULL,onePlot=FALSE,besideOrNot=TRUE,isCol=TRUE,titleOfPlot=NULL){
-#Write the contents of R
+packageBuild<-function(type=type){
 {
 
 }
