@@ -23,15 +23,11 @@
 #functionality
 #This function written by FIRST AND LAST NAME <e-mail address>
 #Date of function first written
+simpleStats<-funtion(type=type){
+	if(type="ave"){
 
-FUNCTION_NAME<-function(mat=freqData,xlabels=NULL,ylabels=NULL,onePlot=FALSE,besideOrNot=TRUE,isCol=TRUE,titleOfPlot=NULL){
-#Write the contents of R
-{
-
-}
-
-
-
-
-
+	}else if(type="var"){
+	}else if(type="summary"){
+	}else if(type="median"){
+	}
 }
