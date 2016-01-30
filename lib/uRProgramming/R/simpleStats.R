@@ -23,11 +23,11 @@
 #functionality
 #This function written by FIRST AND LAST NAME <e-mail address>
 #Date of function first written
-simpleStats<-funtion(type=type){
-	if(type="ave"){
+simpleStats<-function(type=type){
+	if(type=="ave"){
 
-	}else if(type="var"){
-	}else if(type="summary"){
-	}else if(type="median"){
+	}else if(type=="var"){
+	}else if(type=="summary"){
+	}else if(type=="median"){
 	}
 }
