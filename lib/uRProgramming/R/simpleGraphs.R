@@ -24,13 +24,16 @@
 #This function written by FIRST AND LAST NAME <e-mail address>
 #Date of function first written
 
-simpleGraphs<-funtion(type=type){
-	if(type="plot"){
+simpleGraphs<-function(type=type) {
+	if(type=="plot"){
+	}else if(type=="barplot"){
+	}else if(type=="boxplot"){
+	}else if(type=="hist"){
+	}else if(type=="box"){
+	}else if(type=="matplot"){
+	}else if(type=="hist"){
+	  
+	}
 
-	}else if(type="barplot"){
-	}else if(type="boxplot"){
-	}else if(type="hist"){
-	}else if(type="box"){
-	}else if(type="matplot"){
-	}else if(type="hist"){}
+  
 }
