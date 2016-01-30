@@ -19,11 +19,8 @@
 #######################################
 #The purpose of these function to
 #functionality
-<<<<<<< HEAD
-#This function written by Zekai Otles otles@gmail.com
-=======
-#This function written by Zekai Otles 
->>>>>>> 4e7d0ac117b4dcee46590172e421881a104ab7c7
+#This function written by Zekai Otles otlesz@gmail.com
+
 #Date of function first written
 
 manuplateData<-function(type=type)
