@@ -32,5 +32,5 @@ simpleGraphs<-funtion(type=type){
 	}else if(type="hist"){
 	}else if(type="box"){
 	}else if(type="matplot"){
-	}else if(type="hist"){
+	}else if(type="hist"){}
 }
