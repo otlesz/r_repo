@@ -2,6 +2,7 @@
 <project name="uRProgramming" default="installPkg" basedir=".">
 
 <property file="${basedir}/build.properties"/>
+<property environment="${os.name}"/>
 
 <property name="test.dir" value="${basedir}/test"/>
 
@@ -10,12 +11,19 @@
 	
         <target name="Directories"  >
 		<echo>Build uRProgramming Package </echo>
-		<echo>Which is the Rlibrary "${Rlibrary.dir}" </echo>
+                <echo>Environment "${os.name}</echo>		<echo>Which is the Rlibrary "${Rlibrary.dir}" </echo>
 		<echo>Which is the basedir "${basedir}" </echo>		
                 <echo>Which is the backupTar.dir "${backupTar.dir}" </echo>
 	</target>
 
+        <condition property="isWindows">
+            <os family="windows" />
+        </condition>
 
+        <condition property="isUnix">
+            <os family="unix" />
+        </condition>
+        
 	<condition property="RargLine" value='CMD INSTALL --library=${Rlibrary.dir}'>
 		<isset property="Rlibrary.dir"/>
 	</condition>
@@ -46,9 +54,12 @@
 		<echo>Build uRProgramming Package </echo>
                
                 <echo>"basedir="${basedir}</echo>
-                <exec dir="${basedir}" executable="/bin/sh">
-                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
-                <arg line='-c "R CMD  build --binary ${basedir}/lib/uRProgramming/"'/>
+                
+                <exec dir="${basedir}" executable="cmd">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> 
+                 -->
+                
+                <arg line="/c R CMD  build --binary ${basedir}\lib\uRProgramming/"/>
                 </exec>  
                
 	</target>
@@ -58,7 +69,12 @@
                
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}/lib" executable="/bin/sh">
+                    
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                                <arg line='-c "R CMD  build --binary ${basedir}/lib/uRProgramming/"' />
+
+                <arg line='-c "R CMD  build --binary ${basedir}/lib/uRProgramming/"' />
+                
                 <arg line='-c "R CMD  check ${basedir}/lib/uRProgramming/"'/>
                 </exec>  
                
@@ -66,7 +82,7 @@
 	</target>
         
 <target name="check_asCRAN" >
-		<echo>check dmRTools Package </echo>
+		<echo>check uRProgramming Package </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
@@ -75,7 +91,7 @@
 </target>
         
 <target name="check_asx86_64" >
-		<echo>check dmRTools Package </echo>
+		<echo>check uRProgramming Package </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
@@ -84,7 +100,7 @@
 </target>
         
  <target name="check_aswindows" >
-		<echo>check dmRTools Package </echo>
+		<echo>check uRProgramming Package </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
