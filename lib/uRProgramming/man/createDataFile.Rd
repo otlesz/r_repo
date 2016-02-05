@@ -12,7 +12,7 @@ createDataFile(type=type)
 }
 
 \examples{
-%createDataFile(fname="/home/otles/NetBeansProjects/uRProgramming/data/07Haziran2010_sariyer.csv")
+
 createDataFile()
 }
 \author{ZekaiOtles}
