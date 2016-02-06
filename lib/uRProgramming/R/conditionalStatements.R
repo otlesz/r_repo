@@ -22,7 +22,7 @@
 #This function written by Zekai Otles <otlesz@gmail.com>
 #Date of function first written
 
-ConditionalStatement<-function(){
+conditionalStatements<-function(){
 require("tcltk")
   fName=file(tk_choose.files())
   print(fName)
