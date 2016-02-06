@@ -12,7 +12,7 @@ RGUI()
 }
 
 \examples{
-RGUI()
+
 
 }
 \author{ZekaiOtles}
