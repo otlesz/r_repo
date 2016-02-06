@@ -26,6 +26,5 @@ simpleStats<-function(type=type){
 	if(type=="ave"){
 	}else if(type=="var"){
 	}else if(type=="summary"){
-	}else if(type=="median"){
 	}
 }
