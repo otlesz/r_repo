@@ -1,6 +1,6 @@
-\name{LoopStructures}
-\alias{LoopStructures}
-\title{LoopStructures used in R
+\name{loopStructures}
+\alias{loopStructures}
+\title{loopStructures used in R
       }
 \description{this function demonstrates LoopStructures in R)
 }

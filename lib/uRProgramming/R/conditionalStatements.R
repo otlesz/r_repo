@@ -1,4 +1,3 @@
-
 ##
 ## This program is free software; you can redistribute it and/or modify it
 ## under the terms of the GNU General Public License as published by the
@@ -22,7 +21,7 @@
 #This function written by Zekai Otles <otlesz@gmail.com>
 #Date of function first written
 
-ConditionalStatement<-function(){
+conditionalStatements<-function(){
 require("tcltk")
   fName=file(tk_choose.files())
   print(fName)

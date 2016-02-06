@@ -12,7 +12,7 @@ conditionalStatements()
 }
 
 \examples{
-conditionalStatements()
+
 
 }
 \author{ZekaiOtles}
