@@ -25,6 +25,6 @@
 
 loopStructures<-function(){
 #Write the contents of R
-{
+
 
 }
