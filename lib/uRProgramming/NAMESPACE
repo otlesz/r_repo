@@ -2,10 +2,7 @@
 
 # Export all names
 export(
-    conditionalStatements,createDataFile,dataStructures,
-    dataTypes,environment,legendM,
-    loopStructures,manuplatingData,matPlotM,
-    object,packageBuild,RGUI,simpleGraphs,simpleStats
+    uRProgramming
 )
 
 # Import all packages listed as Imports or Depends
