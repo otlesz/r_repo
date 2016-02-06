@@ -2,13 +2,15 @@
 
 # Export all names
 export(
-   
+    conditionalStatements.R,createDataFile.R, dataStructures.R
+    dataTypes.R,environment.R ,legendM.R,
+    LoopStructures.R, manuplatingData.R,matPlotM.R,
+    object.R,packageBuild.R,RGUI.R,simpleGraphs.R,simpleStats.R 
 )
 
 # Import all packages listed as Imports or Depends
 import(
     chron,
     tcltk
-#   odfWeave,
-#RgoogleMaps
+    odfWeave
 )
