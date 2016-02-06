@@ -94,9 +94,9 @@
 <target name="check_asx86_64" >
 		<echo>check uRProgramming Package </echo>
                 <echo>"basedir="${basedir}</echo>
-                <exec dir="${basedir}" executable="/bin/sh">
+                <exec dir="${basedir}" executable="cmd">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
-                <arg line='-c "R CMD  check --as-cran --no-multiarch ${basedir}/lib/uRProgramming/"'/>
+                <arg line="/c R CMD  check --as-cran --no-multiarch ${basedir}\lib\uRProgramming/"/>
                 </exec>
 </target>
         

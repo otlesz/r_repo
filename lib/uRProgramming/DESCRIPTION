@@ -2,7 +2,7 @@ Package: uRProgramming
 Version: 1.0.0
 Date: 2016-01-15
 Title: uRProgramming Package 1.0.0
-Author@R: c(person("Zekai", "Otles",email = "otlesz@gmail.com"),role="aut")
+Authors@R: c(person("Zekai", "Otles",email = "otlesz@gmail.com",role="aut"))
 Author: Zekai Otles  <otlesz@gmail.com>
 Maintainer: Zekai Otles  <otlesz@gmail.com>
 Depends: R (>= 3.0.0),chron,tcltk,odfWeave
