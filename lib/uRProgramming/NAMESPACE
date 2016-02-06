@@ -2,9 +2,9 @@
 
 # Export all names
 export(
-    conditionalStatements,createDataFile, dataStructures
+    conditionalStatements,createDataFile,dataStructures
     dataTypes,environment,legendM,
-    LoopStructures, manuplatingData,matPlotM,
+    loopStructures,manuplatingData,matPlotM,
     object,packageBuild,RGUI,simpleGraphs,simpleStats
 )
 

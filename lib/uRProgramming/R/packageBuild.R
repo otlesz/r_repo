@@ -24,7 +24,6 @@
 #This function written by Zekai Otles otlesz@gmail.com
 #Date of function first written
 packageBuild<-function(type=type){
-{
 
 }
 

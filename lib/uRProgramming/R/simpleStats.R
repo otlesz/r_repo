@@ -1,4 +1,3 @@
-
 ##
 ## This program is free software; you can redistribute it and/or modify it
 ## under the terms of the GNU General Public License as published by the
@@ -25,7 +24,6 @@
 #Date of function first written
 simpleStats<-function(type=type){
 	if(type=="ave"){
-
 	}else if(type=="var"){
 	}else if(type=="summary"){
 	}else if(type=="median"){

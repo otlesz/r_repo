@@ -60,7 +60,7 @@
                 <!--<exec dir="${basedir}" executable="/bin/sh"> 
                  -->
                 
-                <arg line="/c R CMD  build --binary ${basedir}\lib\uRProgramming/"/>
+                <arg line="/c R CMD  build --force --binary ${basedir}\lib\uRProgramming/"/>
                 </exec>  
                
 	</target>
