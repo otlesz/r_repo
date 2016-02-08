@@ -135,7 +135,7 @@
             </target>
             <target name="open_uRProgramming_template" >
                     <echo>running  report function a Batch mode</echo>
-                     <exec dir="${test.dir}" executable="/bin/sh" >
+                     <exec dir="${test.dir}" executable="cmd" >
                         
                     <arg line='-c "soffice uRProgramming_temp.odt"'/>
                     </exec>
