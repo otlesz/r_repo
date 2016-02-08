@@ -83,7 +83,7 @@
 	</target>
         
 <target name="check_asCRAN" >
-		<echo>check uRProgramming Package </echo>
+		<echo>check uRProgramming Package  </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
