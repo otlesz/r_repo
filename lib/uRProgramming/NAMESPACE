@@ -2,7 +2,21 @@
 
 # Export all names
 export(
-   
+   conditionalStatements,
+   CreateDataFile,
+   dataStructures,
+   dataTypes,
+   environment,
+   legendM,
+   loopStructures,
+   manuplateData,
+   matPlotM,
+   object,
+   packageBuild,
+   matPlotM,
+   RGUI,
+   simpleGraphs,
+   simpleStats
 )
 
 # Import all packages listed as Imports or Depends
