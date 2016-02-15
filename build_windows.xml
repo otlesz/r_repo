@@ -83,7 +83,7 @@
 	</target>
         
 <target name="check_asCRAN" >
-		<echo>check uRProgramming Package </echo>
+		<echo>check uRProgramming Package  </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
                 <!--<exec dir="${basedir}" executable="/bin/sh"> -->
@@ -135,7 +135,7 @@
             </target>
             <target name="open_uRProgramming_template" >
                     <echo>running  report function a Batch mode</echo>
-                     <exec dir="${test.dir}" executable="/bin/sh" >
+                     <exec dir="${test.dir}" executable="cmd" >
                         
                     <arg line='-c "soffice uRProgramming_temp.odt"'/>
                     </exec>
