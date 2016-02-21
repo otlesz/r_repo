@@ -16,7 +16,7 @@
 
 
 
-#The purpose of these function to demonstrate conditional statemenet
+#The purpose of these function to demonstrate conditional statements
 #
 #This function written by Zekai Otles <otlesz@gmail.com>
 #Date of function first written
@@ -28,25 +28,25 @@ require("tcltk")
   if(is.null(fName)){
     print("No file selected \n")
   }else{
-    synDat<-read.csv(fName,header=TRUE,skip=0,sep=",")
+    demDat<-read.csv(fName,header=TRUE,skip=0,sep=",")
     
     
   }
   
-  if(!is.null(synDat)){
+  if(!is.null(demDat)){
     
-    for (indx in 1:length(synDat[[1]])){
+    for (indx in 1:length(demDat[[1]])){
       #comparison operator
-      if(synDat[indx,1] ==1 ) {synDat[indx,1]<-"M"}
+      if(demDat[indx,1] ==1 ) {demDat[indx,1]<-"M"}
       
       #assignment based on range
-     if(synDat[indx,2] <=25 )synDat[indx,2]<-"Y"
+     if(demDat[indx,2] <=25 )demDat[indx,2]<-"Y"
   
       #and &
       #or |
-      if(synDat[indx,2] > 25 & synDat[indx,2] <=50 )synDat[indx,2]<-"M"
+      if(demDat[indx,2] > 25 & demDat[indx,2] <=50 )demDat[indx,2]<-"M"
       
-     if(synDat[indx,2] > 50 ) {synDat[indx,2]<-"O"}
+     if(demDat[indx,2] > 50 ) {demDat[indx,2]<-"O"}
       
       #switch statement
       #switch takes an expression, and return a value in the list
@@ -56,7 +56,7 @@ require("tcltk")
     
     } #end of for loop
     stat="mean"
-    result<-switch(stat,"mean"=mean(synDat[,3]),"sd"=sd(synDat[,3]) )
+    result<-switch(stat,"mean"=mean(demDat[,3]),"sd"=sd(demDat[,3]) )
     
     print(result)             
     
@@ -76,6 +76,6 @@ require("tcltk")
   }
   
   
-return (synDat)
+return (demDat)
 }
 
