@@ -25,6 +25,14 @@
 
 loopStructures<-function(){
 #Write the contents of R
+  set.seed(312)
+  #create 100 random number between 0 and 1000
+  xInt<-floor(runif(100,0,1000))
+  
+  for(indx in 0:length(xInt) ){
+    if(indx %%10 ==0){print(xInt[indx])}
+  
+  }
 
 
 }
