@@ -55,6 +55,17 @@ require("tcltk")
                                           
     
     } #end of for loop
+    
+    #while loop
+    #The while loop to demonstrate the access of elements
+    index=1
+    while(index<=length(demDat[[1]])){
+      
+      if(demDat[index,1]==0) demDat[index,1]<'Total'
+      if(demDat[index,1]==1) demDat[index,1]<'Male'
+      if(demDat[index,1]==2) demDat[index,1]<'Female'
+      index<-index+1
+    }
     stat="mean"
     result<-switch(stat,"mean"=mean(demDat[,3]),"sd"=sd(demDat[,3]) )
     
