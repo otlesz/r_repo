@@ -34,5 +34,14 @@ loopStructures<-function(){
   
   }
 
+  #while loop
+  #The while loop to demonstrate the access of elements
+  index<-80
+  while(index<=length(xInt)){
+    xInt[index]<-ifelse(as.integer(xInt[index]) %% 2 ==0,"Even","Odd")
+    
+    if(index %%4 ==0){print(xInt[index])}
+    index<-index+1
+  }
 
 }
