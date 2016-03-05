@@ -1,0 +1,8 @@
+->Go to test directory and run odfWeave.R which act simiar to main program
+1)setwd("....")
+2)source("odfWeave.R")
+3)If you have open office or libre office
+open(uRprogramming_report.odt) 
+
+I will try to create pdf file from this file what was the last report produced.
+Please see uRProgramming.pdf
