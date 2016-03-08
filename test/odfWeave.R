@@ -28,5 +28,7 @@ imageDefs$type<-"cairo1"
 imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
+matrixChunk<-paste(getwd(),"test/matrixChunk.R",sep="/")
+source(matrixChunk)
 odfWeave("test/uRProgramming_templ.odt","test/uRProgramming_report.odt",workDir="../odfWeaveTmp")
 
