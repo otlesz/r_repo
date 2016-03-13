@@ -11,6 +11,7 @@ export(
    loopStructures,
    manuplateData,
    matPlotM,
+   matrixDataStructures,
    object,
    packageBuild,
    matPlotM,
