@@ -15,24 +15,44 @@ matrixDataStructures<-function(chunk=chunk){
   cat('return(matr)')
   
   } else if(chunk == 2 ){
-    cat('data(mtcars)')
+    cat('\n\ndata(mtcars)\n')
     data(mtcars)
+    cat('mpgVals<-array("",dim=dim(mtcars)[1]\n')
     cat('for (rowIndx in 2:dim(mtcars)[1]){\n')
     cat('\t for (colIndx in 1:dim(mtcars)[2]){\n')
-    cat('\t \t if(colIndx ==1){mpgValues[rowIbdx-1]<-mtcars[rowIndx,2]}\n')
+    
+    cat('\t \t if(colIndx ==1){mpgVals[rowIndx-1]<-mtcars[rowIndx,2]}\n')
     cat('\t}\n')
     cat('\n')
+    
+    
+    mpgVals<-array('',dim=dim(mtcars)[1])
     for (rowIndx in 2:dim(mtcars)[1]){
      
       for (colIndx in 1:dim(mtcars)[2]){
-        cat('if(colIndx ==1){mpgValues<-mtcars[rowIndx,2]}\n')
-        if(colIndx ==1){mpgValues[rowIndx-1]<-mtcars[rowIndx,2]}
+       
+        if(colIndx ==1){mpgVals[rowIndx-1]<-mtcars[rowIndx,2]}
       }
     }
-    
-    matr<-mtCars
+    cat('print every 4th element \n')
+    cat('print(mpgVals[seq(1,length(mpgVals),4)])\n')
+    print(mpgVals[seq(1,length(mpgVals),4)])
+    cat('matr<-as.matrix(mtcars)\n')
+    matr<-as.matrix(mtcars)
   } else if (chunk == 3) {
-    cat('test chunk 3')
+    
+    cat('\n\ndata(mtcars)\n')
+    data(mtcars)
+    cat('matrx<-as.matrix(mtcars)\n')
+    matrx<-as.matrix(mtcars)
+    cat('merc<-matrx[ which(rownames(matrx)=="Merc 450SE"),]\n')
+    cat('print(merc)\n')
+    print(merc)
+    merc<-matrx[ which(rownames(matrx)=='Merc 450SE'),]
+    cat('colSums(matr)\n')
+    cat('colMeans(matr)\n')
+    cat('matr<-rbind(colSums(matrx),colMeans(matrx))\n')
+    matr<-rbind(colSums(matrx),colMeans(matrx))
     
   }
   
