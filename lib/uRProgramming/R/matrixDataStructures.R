@@ -47,7 +47,7 @@ matrixDataStructures<-function(chunk=chunk){
     matrx<-as.matrix(mtcars)
     cat('merc<-matrx[ which(rownames(matrx)=="Merc 450SE"),]\n')
     cat('print(merc)\n')
-    print(merc)
+    
     merc<-matrx[ which(rownames(matrx)=='Merc 450SE'),]
     cat('colSums(matr)\n')
     cat('colMeans(matr)\n')
