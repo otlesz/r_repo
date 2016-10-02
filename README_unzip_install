@@ -1,0 +1,16 @@
+important
+
+Unzip.exe is needed to procees .odt file
+
+please install unzip.exe
+and
+make modifications to PATH, so it can find unzip.exe
+
+1) download
+http://stahlworks.com/dev/?tool=zipunzip
+
+to extract zip files on the command line, download unzip.exe here. 
+
+2) save unzip.exe
+3) make modification to path
+
