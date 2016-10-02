@@ -10,7 +10,8 @@ make modifications to PATH, so it can find unzip.exe
 http://stahlworks.com/dev/?tool=zipunzip
 
 to extract zip files on the command line, download unzip.exe here. 
+o create zip files on the command line, download zip.exe here. 
 
-2) save unzip.exe
+2) save unzip.exe and zip.exe
 3) make modification to path
 
