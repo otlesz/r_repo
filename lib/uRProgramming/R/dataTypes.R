@@ -17,18 +17,17 @@
 #######################################
 # Function dataTypes
 #######################################
-#The purpose of these function to
+#The purpose of these function to find data types
 #This function written by Zekai Otles otlesz@gmail.com
-#Date of function first written 9/24/2104
 
 dataTypes<-function(type=type)
 {
 	if(is.numeric(type)){
              returnVal="numeric"
              if(is.integer(type)){
-                returnVal=integer
+                returnVal="integer"
               }else{
-                returnVal=double
+                returnVal="double"
               }
               
 	}else{
