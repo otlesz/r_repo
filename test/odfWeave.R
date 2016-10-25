@@ -2,6 +2,7 @@
 library("chron")
 library("odfWeave")
 library("log4r")
+library("readr")
 library("uRProgramming")
 data(package="uRProgramming")
 data(synDat)
