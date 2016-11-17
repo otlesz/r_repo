@@ -9,7 +9,7 @@ con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogrammi
 
   for (iRow in 1:numR) {
    
-  print(iRow)
+ # print(iRow)
   data<-airquality[iRow,]
    
   data[is.na(data)]<-999999
@@ -18,7 +18,7 @@ con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogrammi
 #  print(statement)
   insertQuery <- paste(paste(statement,"VALUES("), paste(data, collapse = ", "), ")")
 #  
-  print(insertQuery)
+#  print(insertQuery)
  dbGetQuery(con,insertQuery)
   }
 dbDisconnect(con)
