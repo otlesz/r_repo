@@ -5,7 +5,7 @@ library("RMySQL")
                
 
 numR<-dim(airquality)[1]
-#con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogramming")
+con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogramming")
 
   for (iRow in 1:numR) {
    
@@ -19,8 +19,8 @@ numR<-dim(airquality)[1]
   insertQuery <- paste(paste(statement,"VALUES("), paste(data, collapse = ", "), ")")
 #  
   print(insertQuery)
-#  dbGetQuery(con,insertQuery)
+ dbGetQuery(con,insertQuery)
   }
-#dbDisconnect(con)
+dbDisconnect(con)
 
 }
