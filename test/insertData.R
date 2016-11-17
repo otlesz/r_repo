@@ -13,6 +13,7 @@ numR<-dim(airquality)[1]
   data<-airquality[iRow,]
    
   data[is.na(data)]<-999999
+  statement<-paste("INSERT INTO ","airquality")
    
 #  print(statement)
   insertQuery <- paste(paste(statement,"VALUES("), paste(data, collapse = ", "), ")")
