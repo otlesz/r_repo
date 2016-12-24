@@ -1,6 +1,6 @@
-#this function computes airdensity based on Temparature (K), Pressure (mb) using ideal gas law of the
-#layer
-
+#this function computes airdensity for dry air based on Temparature (K), Pressure (mb) 
+#using ideal gas law 
+#
 airdensity<-function(temp=temp, pres=pres) {
 #using hydrostatic equation we can approximate the thicknes of the
 #atmosphere as m
