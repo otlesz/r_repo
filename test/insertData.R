@@ -7,11 +7,7 @@ library("RMySQL")
 numR<-dim(airquality)[1]
 con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogramming")
 
-results<-dbSendQuery(con, "SELECT * FROM airquality")
-dataFrm<-dbFetch(results,)
 
-print(dim(dataFrm))
-print(dataFrm[1:5,])
 iSkip<-TRUE
 if(iSkip){
   for (iRow in 1:numR) {
