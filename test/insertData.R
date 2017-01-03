@@ -10,13 +10,13 @@ results<-dbSendQuery(con, "SELECT * FROM airquality")
 dataFrm<-dbFetch(results)
 
 #dbFetch(results)
-print(dim(dataFrm))
+print(dim(dataFrm)[1])
 #print(dataFrm[1:5,])
 iSkip<-FALSE
-#if(dim(dataFrm[1] > 1)){iSkip<-FALSE}
-#  else {
-#    iSkip<-TRUE
-#}
+if(dim(dataFrm)[[1]] > 1){iSkip<-FALSE
+ }else {
+   iSkip<-TRUE
+}
 
 if(iSkip){
   for (iRow in 1:numR) {
