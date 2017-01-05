@@ -30,7 +30,7 @@ if(iSkip){
 #  print(statement)
   insertQuery <- paste(paste(statement,"VALUES("), paste(data, collapse = ", "), ")")
 #  
-#  print(insertQuery)
+ print(insertQuery)
  dbGetQuery(con,insertQuery)
   }
 }#end of iSkip
