@@ -1,6 +1,6 @@
 #demonstrate simple distribution and some statistics
-simpleStats<-function(){
-x<-rnorm(100,mean=273.16,15)
+simpleStats<-function(n,mean,sd){
+x<-rnorm(n,mean=mean,sd)
 #mean of variable
 mean=mean(x)
 ave=ave(x)
@@ -9,5 +9,6 @@ min=min(x)
 median=median(x)
 sd=sd(x)
 sum=sum(x)
-return(list(mean,ave,max,min,median,sd,sum))
+summary=summary(x)
+return(list(mean=mean,ave=ave,max=max,min=min,median=mean,sd=sd,summary=summary,sum=sum))
 }
