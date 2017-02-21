@@ -26,5 +26,5 @@ randomNumGen<-function(seed=FALSE){
     
   }
   
-#  return(list(xTempNorm=xTempNorm,xTempUni=xTempUni))
+ return(list(xTempNorm=xTempNorm,xTempUni=xTempUni))
 }
