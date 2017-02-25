@@ -5,7 +5,7 @@
 #testNormal(numSet=100,mean=c(5,15,50),sd=c(10,5,3,1))
 #num number of random observations
 normalDist<-function(numSet=numSet,meanSet=meanSet,sdSet=sdSet){
-   library(e1071)
+#   library(e1071)
    #opar<-par(ask=interactive())
    opar<-par(font.main=1,ps=9)
    layout(matrix(c(1,2,3,4),2,2,byrow=TRUE))
