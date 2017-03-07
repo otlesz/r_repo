@@ -32,7 +32,7 @@ if(isCol & onePlot){
 titleOfP<-paste(titleOfPlot, "Months")
 if(!onePlot){
   
-  for(index in 1:numRows){
+  for(index in 2:numRows){
     titleOfP<-paste(titleOfPlot,rownames(mat)[index])
  barplot(as.numeric(mat[index,]),xlab=xlabels,ylab=ylabels,col=colArray)
     title(titleOfP)
