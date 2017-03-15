@@ -6,7 +6,7 @@ catTemp<-function(matrix=matrix,arrayOfBreaks=arrayOfBreaks,columnNames=columnNa
   colnames(catTempMatrx)<-columnNames
   for(index in 1:numRows){
     XHist<-hist(as.numeric(matrix[index,]),plot=FALSE,breaks=arrayOfBreaks)
-  #print(index)
+  #$print(index)
    catTempMatrx[index,]<-XHist$counts
     
   }#end of for loop for index
