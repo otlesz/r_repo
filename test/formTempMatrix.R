@@ -10,7 +10,7 @@ formTempMatrix<-function(dataFrm)
   for(mIndx in 1:length(monthAsNum)){
     row_Names[mIndx]<-switch(as.character(monthAsNum[mIndx]),"5"="May","6"="June","7"="July","8"="Aug","9"="Sep")
   }
-  row.names(tempAsMatrix)<-row_Names
+  rownames(tempAsMatrix)<-row_Names
     
   length(unique(dataFrm$Month))
   rowIndex<-unique(dataFrm$Month)
