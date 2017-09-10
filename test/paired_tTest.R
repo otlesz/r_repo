@@ -10,6 +10,12 @@ t.test(df$Kadin,df$Erkek,paired=TRUE, conf.level=0.95)
 
 colNames<-levels(chickwts$feed)
 xMatr<-array(NA,c(14,6))
+
+
+
+
+pValues<-array("",c(5,6))
+
 colnames(xMatr)<-colNames
 for (colIndx in 1:length(colNames)){
   x<-chickwts[which(as.character(chickwts$feed)==as.character(colNames[colIndx])),]
@@ -21,5 +27,15 @@ for (colIndx in 1:length(colNames)){
   }
   
 }
-return(xMatr)
+
+maxLen<-dim(xMatr)[2]-1
+
+for (rrowIndx in 1:maxLen){
+  iStart<-rrowIndx+1
+  for (ccolIndx in iStart:dim(xMatr)[2]){
+    pValues[rrowIndx,ccolIndx]<-t.test(xMatr[,rrowIndx],xMatr[,ccolIndx],paired=TRUE, conf.level=0.95)$p.value
+  }
+}
+
+return(list(xMatr=xMatr,pValues=pValues))
 }
