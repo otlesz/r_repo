@@ -1,7 +1,8 @@
 paired_tTest<-function(){
 
 library('uRProgramming')
-heightData<-data.frame(CreateDataFile())
+#heightData<-data.frame(CreateDataFile())
+load("C:/Users/otles/OneDrive/Documents/r_repo/lib/uRProgramming/data/heightData.RData")
 df<-heightData
 t.test(df$Kadin,df$Erkek,paired=TRUE, conf.level=0.95)
 
@@ -10,7 +11,6 @@ t.test(df$Kadin,df$Erkek,paired=TRUE, conf.level=0.95)
 
 colNames<-levels(chickwts$feed)
 xMatr<-array(NA,c(14,6))
-
 
 
 
