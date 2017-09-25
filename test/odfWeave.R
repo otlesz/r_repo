@@ -8,7 +8,6 @@ data(package="uRProgramming")
 data(synDat)
 
 
-
 library('log4r')
 library("RMySQL")
 #Create a new logger object with create.logger().
