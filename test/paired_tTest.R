@@ -33,7 +33,10 @@ maxLen<-dim(xMatr)[2]-1
 for (rrowIndx in 1:maxLen){
   iStart<-rrowIndx+1
   for (ccolIndx in iStart:dim(xMatr)[2]){
-    pValues[rrowIndx,ccolIndx]<-t.test(xMatr[,rrowIndx],xMatr[,ccolIndx],paired=TRUE, conf.level=0.95)$p.value
+    
+    pvals<-t.test(xMatr[,rrowIndx],xMatr[,ccolIndx],paired=TRUE, conf.level=0.95)$p.value
+    pValues[rrowIndx,ccolIndx]<-format(pvals,digits = 1 ,nsmall = 5)
+#    print (pValues[rrowIndx,ccolIndx])
   }
 }
 
