@@ -35,8 +35,10 @@ for (rrowIndx in 1:maxLen){
   for (ccolIndx in iStart:dim(xMatr)[2]){
     
     pvals<-t.test(xMatr[,rrowIndx],xMatr[,ccolIndx],paired=TRUE, conf.level=0.95)$p.value
-    pValues[rrowIndx,ccolIndx]<-format(pvals,digits = 1 ,nsmall = 5)
-#    print (pValues[rrowIndx,ccolIndx])
+
+    pValues[rrowIndx,ccolIndx]<-format(pvals,digits = 1 ,nsmall = 5, justify = "left")
+
+    print (pValues[rrowIndx,ccolIndx])
   }
 }
 
