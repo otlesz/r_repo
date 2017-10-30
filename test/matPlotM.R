@@ -1,7 +1,7 @@
 
 matPlotM<-function(shMatrix=shMatrix,xlab=xlab,xaxisOpts=NULL,yaxisOpts=NULL,ylab=ylab,title=title,leg=leg){
   library("chron")
-  source('~/r_repo/test/legendR.R')
+  source('/home/zekai/R_workspace/r_repo/test/legendR.R')
 
         nRows<-dim(shMatrix)[1]
         nCols<-dim(shMatrix)[2]

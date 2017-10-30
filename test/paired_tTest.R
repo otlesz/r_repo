@@ -2,7 +2,7 @@ paired_tTest<-function(){
 
 library('uRProgramming')
 #heightData<-data.frame(CreateDataFile())
-load("C:/Users/otles/OneDrive/Documents/r_repo/lib/uRProgramming/data/heightData.RData")
+load("/home/zekai/R_workspace/r_repo/lib/uRProgramming/data/heightData.RData")
 df<-heightData
 t.test(df$Kadin,df$Erkek,paired=TRUE, conf.level=0.95)
 
