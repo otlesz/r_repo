@@ -30,7 +30,8 @@ imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
 
-con<-dbConnect(RMySQL::MySQL(), dbname="urprogramming",password="urprogramming")
+#con<-dbConnect(RMySQL::MySQL(), dbname="urprogramming",password="urprogramming")
+con <- dbConnect(RMySQL::MySQL(),  user = 'root', password = 'erzurum', host = '127.0.0.1' , dbname = 'urprogramming')
 
 
   odfWeave("test/uRProgramming_templ.odt","test/uRProgramming_report.odt",workDir="../odfWeaveTmp")
