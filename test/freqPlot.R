@@ -35,7 +35,9 @@ if(!onePlot){
   for(index in 2:numRows){
 
     titleOfP<-paste(titleOfPlot,rownames(mat)[index])
- barplot(as.numeric(mat[index,]),xlab=xlabels,ylab=ylabels,col=colArray)
+    
+    bp<-barplot(as.numeric(mat[index,]),xlab=xlabels,ylab=ylabels,col=colArray)
+    axis(side=1, at=bp, labels=names(mat[index,]))
     title(titleOfP)
         box()
   }#end of for loop for index
