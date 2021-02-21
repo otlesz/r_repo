@@ -14,13 +14,13 @@ formTempMatrix<-function(dataFrm)
     
   length(unique(dataFrm$Month))
   rowIndex<-unique(dataFrm$Month)
-  for (index in 1:length(rowIndex)){
+  for(index in 1:length(rowIndex)){
     
     
-    
-    x<-dataFrm$Temp[dataFrm$Month==rowIndex[index]]
-    tempAsMatrix[index,]<-x[1:30]
+    x<-dataFrm$temp[dataFrm$Month==rowIndex[index]]
+   tempAsMatrix[index,]<-x[1:30]
   }
  
-  return(tempAsMatrix)
+
+    return(tempAsMatrix)
 }
