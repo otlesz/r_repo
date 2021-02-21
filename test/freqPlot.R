@@ -7,7 +7,7 @@
 #This function plots  barplots for for given matrix data,
 #with bar stacked on each other or bars side of each other
 #different pattern style filling is also an option
-#This function written by Zekai Otles <otlesz@gmail.com>
+#This function written by Zekai Otles otlesz@gmail.com
 
 freqPlot<-function(mat=freqData,xlabels=NULL,ylabels=NULL,onePlot=FALSE,besideOrNot=TRUE,isCol=TRUE,titleOfPlot=NULL){
  
