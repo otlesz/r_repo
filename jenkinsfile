@@ -1,0 +1,72 @@
+pipeline {
+    agent { label 'testvm' }
+    environment {
+    postbuild = 'Publish Unit Tests Reports'
+    }
+    parameters {
+    string(name: 'Version', defaultValue: '1.0.0', description: 'Version Number')
+    }
+        
+    stages {
+        stage('setup and verify') {
+            steps {
+                echo 'setup and verify'
+            }
+        }
+        stage('lint analysis') {
+            steps {
+                echo 'lint analysis'
+            }
+        }
+        stage('unit tests') {
+            steps {
+                echo 'unit tests'
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'build'
+            }
+        }
+        stage('E2E tests') {
+            steps {
+                echo 'E2E tests'
+            }
+        }
+        stage('load tests') {
+            steps {
+                echo 'load tests'
+            }
+        }
+        stage(' build and push images') {
+            steps {
+                echo 'build and push images'
+            }
+        }
+        stage('TF Plan') {
+            steps {
+                echo 'TF Plan'
+            }
+        }
+        stage('TF Apply') {
+            steps {
+                echo 'TF Apply'
+            }
+        }
+        stage('deploy to cluster') {
+            steps {
+                echo 'deploy to cluster'
+                echo "${params.Version} to be deployed"
+            }
+        }
+    }
+    
+    post { 
+        always {
+            echo ' Hello post!'
+        }
+     
+    }
+    
+}
+
