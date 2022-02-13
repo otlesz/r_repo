@@ -14,8 +14,7 @@ pipeline {
 
     stage('pwd') {
       steps {
-        echo 'print working directory'
-        sh ' ${env.WORKSPACE}'
+        echo ' ${env.WORKSPACE}'
       }
     }
 
