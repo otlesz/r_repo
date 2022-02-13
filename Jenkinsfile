@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'dockervm'
+    }
+
+  }
   stages {
     stage('error') {
       steps {
