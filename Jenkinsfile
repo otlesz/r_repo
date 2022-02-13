@@ -20,7 +20,7 @@ pipeline {
 
     stage('isUnix') {
       steps {
-        sh 'isUnix'
+        sh '  sh \'might fail\''
       }
     }
 
