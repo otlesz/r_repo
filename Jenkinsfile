@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('isUnix') {
+      steps {
+        sh 'isUnix'
+      }
+    }
+
   }
 }
