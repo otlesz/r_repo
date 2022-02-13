@@ -15,8 +15,7 @@ pipeline {
     stage('pwd') {
       steps {
         echo 'print working directory'
-        sh ''' def workspace = pwd()
-'''
+        sh ' echo "pwd()"'
       }
     }
 
