@@ -20,7 +20,7 @@ pipeline {
 
     stage('isUnix') {
       steps {
-        sh '  sh \'might fail\''
+        sh 'sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"'
       }
     }
 
