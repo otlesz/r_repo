@@ -18,9 +18,9 @@ pipeline {
       }
     }
 
-    stage('isUnix') {
+    stage('sh') {
       steps {
-        sh 'sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"'
+        sh 'sh \'echo hello\' /* short form  */'
       }
     }
 
