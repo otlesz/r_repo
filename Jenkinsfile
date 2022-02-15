@@ -20,7 +20,7 @@ pipeline {
 
     stage('sh') {
       steps {
-        sh 'sh \'echo hello\' /* short form  */'
+        sh 'sh([script: \'echo hello\'])  /* long form */'
       }
     }
 
