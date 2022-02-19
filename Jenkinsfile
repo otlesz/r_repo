@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('run_report') {
+      steps {
+        sh ' ant -f build_linux.xml report'
+      }
+    }
+
   }
 }
