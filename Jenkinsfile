@@ -20,7 +20,7 @@ pipeline {
 
     stage('sh') {
       steps {
-        sh '  "mkdir -p output"'
+        sh '  mkdir -p output'
       }
     }
 
