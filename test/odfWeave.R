@@ -8,7 +8,6 @@ data(package="uRProgramming")
 data(synDat)
 
 
-
 library('log4r')
 library("RMySQL")
 #Create a new logger object with create.logger().
@@ -31,8 +30,10 @@ imageDefs$device<-"png"
 setImageDefs(imageDefs)
 
 
-con<-dbConnect(RMySQL::MySQL(), dbname="urprogramming",password="urprogramming")
+#con<-dbConnect(RMySQL::MySQL(), dbname="urprogramming",password="urprogramming")
+con <- dbConnect(RMySQL::MySQL(),  user = 'root', password = 'erzurum', host = '127.0.0.1' , dbname = 'urprogramming')
 
 
-  odfWeave("test/uRProgramming_templ.odt","test/uRProgramming_report.odt",workDir="../odfWeaveTmp")
+#  odfWeave("test/uRProgramming_templ.odt","test/uRProgramming_report.odt",workDir="../odfWeaveTmp")
+  odfWeave("uRProgramming_templ.odt","uRProgramming_report.odt",workDir="../odfWeaveTmp")
 

@@ -49,6 +49,10 @@
 		<delete file="RlibPaths.txt"/>
 	</target>
 
+        <target name="delOldReport" >
+		<delete dir="{testdir}" file="uRProgramming_report.odt"/>
+	</target>
+
 
 	<target name="build" >
 		<echo>Build uRProgramming Package </echo>
@@ -130,7 +134,7 @@
                     <arg line='-c "soffice uRProgramming_report.odt"'/>
                     </exec>
             </target>
-            <target name="open_uRProgramming_template" >
+            <target name="open_uRProgramming_template" depends="delOldReport">
                     <echo>running  report function a Batch mode</echo>
                      <exec dir="${test.dir}" executable="/bin/sh" >
                         

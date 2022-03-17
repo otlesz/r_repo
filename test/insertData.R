@@ -5,7 +5,10 @@ library("RMySQL")
                
 
 numR<-dim(airquality)[1]
-con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogramming")
+#con <- dbConnect(RMySQL::MySQL(), dbname = "urprogramming",password="urprogramming")
+
+con <- dbConnect(RMySQL::MySQL(),  user = 'rprogrammer', password = 'uRProgramming', host = '127.0.0.1' , dbname = 'urprogramming')
+
 results<-dbSendQuery(con, "SELECT * FROM airquality")
 dataFrm<-dbFetch(results)
 
